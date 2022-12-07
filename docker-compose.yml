@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sockd:
+    build:
+      context: .
+      dockerfile: sockd/Dockerfile
+    image: sockd:latest
+    ports:
+      - "1080:1080"
+    volumes:
+      - ./sockd:/app
